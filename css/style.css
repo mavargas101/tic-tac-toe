@@ -1,0 +1,122 @@
+
+*{
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  body{
+    background-color: #ececec;
+  }
+  h1{
+    font-size: 4rem;
+    text-align: center;
+    padding: 5rem 0 ;
+  }
+  footer{
+    padding: 5rem;
+  }
+  p{
+    font-size: 1rem;
+    text-align: center;
+  }
+  .accent{
+    color: #FF3B3F;
+  }
+  .board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 36rem;
+    padding: 2rem;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 1rem;
+  }
+  .row{
+    display: flex;
+    gap: 1rem;
+  }
+  .square{
+    width: 10rem;
+    height: 10rem;
+    border: 1px #D6D9DF solid;
+    border-radius: 1rem;
+    color: black;
+    font-weight: 600;
+    font-size: 4rem;
+    /* button styling */
+    background-color: #F6F6F6;
+  }
+  
+  .square:hover:enabled{
+    background-color: #E8E8E8;
+  }
+  
+  .selected{
+    background-color: #b1b1b1;
+  }
+  .winner{
+    background-color: #FF3B3F;
+    color: white;
+  }
+  .box-shadow{
+    box-shadow: rgb(0 0 0 / 10%) 0px 10px 15px -3px, rgb(0 0 0 / 5%) 0px 4px 6px -2px;
+  }
+  
+  .modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px #D6D9DF solid;
+    border-radius: 1rem;
+    z-index: 10;
+    background-color: white;
+    width: 20rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal.active{
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .modal-text{
+    text-align: center;
+  }
+  .modal-button{
+    text-align: center;
+  }
+  #overlay{
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.5);
+    pointer-events: none;
+  }
+  #overlay.active{
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  @media screen and (max-width: 672px){
+    h1{
+      font-size: 3rem;
+      padding: 1rem;
+    }
+    .board{
+      max-width: 20rem;
+    }
+    .square{
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+  
+  
